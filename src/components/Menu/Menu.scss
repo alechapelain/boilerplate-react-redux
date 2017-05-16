@@ -1,0 +1,20 @@
+@import '../../styles/settings/colors';
+
+.menu {
+  .link-list {
+    li {
+      list-style-type: none;
+      display: inline-block;
+
+      a:hover {
+        cursor: pointer;
+        color: $blue;
+      }
+
+      &:not(:last-child)::after {
+        content: '|';
+        margin: 0 30px;
+      }
+    }
+  }
+}

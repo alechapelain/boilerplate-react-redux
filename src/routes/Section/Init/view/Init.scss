@@ -1,0 +1,28 @@
+.init {
+
+  padding-left: 40px;
+
+  .movie-poster {
+    display: inline-block;
+    max-width: 300px;
+  }
+
+  .movie-detail-list {
+    list-style-type: none;
+    display: inline-block;
+    max-width: 400px;
+    word-break: break-word;
+    padding: 0 10px;
+    margin: 0;
+  }
+
+  .data-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 20px 0;
+    }
+  }
+}

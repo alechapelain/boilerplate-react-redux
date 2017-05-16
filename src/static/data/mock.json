@@ -1,0 +1,19 @@
+{
+  "list": [
+    { 
+      "id": 1,
+      "name": "David",
+      "job": "Manager"
+    },
+    {
+      "id": 2,
+      "name": "Kelly",
+      "job": "Developer"
+    },
+    {
+      "id": 3,
+      "name": "Ania",
+      "job": "Manager"
+    }
+  ]
+}

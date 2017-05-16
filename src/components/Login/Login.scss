@@ -1,0 +1,47 @@
+@import '../../styles/settings/colors';
+
+.login {
+  width: 100%;
+  text-align: center;
+  padding: 200px 0;
+
+  .loader {
+    margin: auto;
+    display: block;
+    margin-top: -30px;
+  }
+
+  input {
+    margin: 5px auto;
+    display: block;
+    border-radius: 6px;
+    background: $grey;
+    padding: 5px 7px;
+    border: 0;
+  }
+
+  button {
+    border-radius: 6px;
+    border: 0;
+    padding: 7px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: $blue;
+    background: $grey;
+    margin: 10px 0;
+    opacity: 1;
+    transition: opacity 0.2s;
+
+    &:hover {
+      cursor: pointer;
+      background: $dark-grey;
+      color: $white;
+    }
+
+    &:disabled {
+      cursor: default;
+      opacity: 0;
+      transition: opacity 0s;
+    }
+  }
+}
