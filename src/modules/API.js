@@ -24,6 +24,16 @@ const API = {
     }, {
       method: 'GET'
     });
+  },
+  searchMovieByName: (movieSearch) => {
+    return Resource.get('http://www.omdbapi.com', {
+      s: movieSearch,
+      y: '',
+      type: 'movie',
+      r: 'json'
+    }, {
+      method: 'GET'
+    });
   }
 };
 

@@ -1,6 +1,10 @@
-import HomeView from './view/Home';
+import { connect } from 'react-redux';
+import HomeComponent from './Home.component.js';
 
-// Sync route definition
-export default {
-  component: HomeView
+const mapDispatchToProps = {};
+
+const mapStateToProps = (state) => {
+  return {};
 };
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomeComponent);

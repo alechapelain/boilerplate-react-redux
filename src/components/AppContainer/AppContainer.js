@@ -1,23 +1,29 @@
-import React, { Component, PropTypes } from 'react';
-import { Router } from 'react-router';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import { Provider } from 'react-redux';
 
-class AppContainer extends Component {
+import CoreLayout from '../../layouts/CoreLayout/containers/CoreLayoutContainer';
+import Home from '../../routes/Home';
+import MovieFinder from '../../routes/MovieFinder';
+
+class AppContainer extends React.Component {
   render() {
-    const { history, routes, store } = this.props;
+    const { store } = this.props;
     return (
       <Provider store={store}>
-        <div>
-          <Router history={history} children={routes} />
-        </div>
+        <Router history={hashHistory}>
+          <Route path="/" component={CoreLayout}>
+            <IndexRoute component={Home} />
+            <Route path="movie-finder" component={MovieFinder} />
+          </Route>
+        </Router>
       </Provider>
     );
   }
 }
 
 AppContainer.propTypes = {
-  history: PropTypes.object.isRequired,
-  routes: PropTypes.object.isRequired,
   store: PropTypes.object.isRequired
 };
 

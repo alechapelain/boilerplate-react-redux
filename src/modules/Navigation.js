@@ -12,11 +12,9 @@ let Navigation = {
     Navigation.goToTop();
     hashHistory.push('/');
   },
-  section: {
-    goToInit: () => {
-      Navigation.goToTop();
-      hashHistory.push('/section');
-    }
+  goToMovieFinder: () => {
+    Navigation.goToTop();
+    hashHistory.push('/movie-finder');
   }
 };
 

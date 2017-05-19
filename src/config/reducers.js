@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 
 import coreReducer from '../layouts/CoreLayout/coreLayoutReducer';
-import sectionReducer from '../routes/Section/sectionReducer';
+import movieReducer from '../resources/movie/movie.reducer';
 
 export const makeRootReducer = (asyncReducers) => {
   return combineReducers({
     core: coreReducer,
-    section: sectionReducer,
+    movie: movieReducer,
     ...asyncReducers
   });
 };

@@ -6,31 +6,17 @@ import Utils from '../../../modules/Utils';
 
 class CoreLayout extends React.Component {
   render() {
-    let template;
-    if (Utils.isDefined(this.props.core.token)) {
-      template = (
-        <div className="container">
-          <Menu />
-          <div className="wrapper">{this.props.children}</div>
-        </div>
-      );
-    } else {
-      template = (
-        <div>
-          <Login action={this.props.authenticate} />
-        </div>
-      );
-    }
-
-    return template;
+    return (
+      <div>
+        <Menu />
+        <div className="content">{this.props.children}</div>
+      </div>
+    );
   }
 }
 
 CoreLayout.propTypes = {
-  children: React.PropTypes.element.isRequired,
-  location: React.PropTypes.object.isRequired,
-  core: React.PropTypes.object,
-  authenticate: React.PropTypes.func
+  children: React.PropTypes.element.isRequired
 };
 
 export default CoreLayout;

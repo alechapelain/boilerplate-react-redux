@@ -8,7 +8,7 @@ class Menu extends React.Component {
       <div className="menu">
         <ul className="link-list">
           <li onClick={Navigation.goToHome}><a>Home</a></li>
-          <li onClick={Navigation.section.goToInit}><a>Section</a></li>
+          <li onClick={Navigation.goToMovieFinder}><a>Movie Finder</a></li>
         </ul>
       </div>
     );
